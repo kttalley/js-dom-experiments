@@ -1,0 +1,43 @@
+</html>
+    <p id="para" style="color: purple">
+        Nice text
+    </p >
+
+    <p id = "foo" style = "color: green">
+        We can use Javascript to modify the style of an element.
+        Style is one property of an element with speicifc
+        sub-methods.
+    </p>
+      
+      <script>
+        let para = document.getElementById("para");
+        console.log(para.style.color);
+        para.style.color = "orange";
+
+        let foo = document.getElementById("foo");
+        console.log(foo.style.color);
+        foo.style.color = "blue";
+
+
+        
+      </script>
+
+
+<p style="text-align: center">
+        <img src="https://4fi8v2446i0sw2rpq2a3fg51-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/KittenProgression-Darling-week6.jpg" style="position: relative">
+      </p>
+      <script>
+        let cat = document.querySelector("img");
+        let angle = Math.PI / 6;
+        function animate(time, lastTime) {
+          if (lastTime != null) {
+            angle += (time - lastTime) * 0.001;
+          }
+          cat.style.center = (Math.sin(angle) * 200) + "px";
+          cat.style.top = (Math.sin(angle) * 200) + "px";
+          cat.style.left = (Math.cos(angle) * 200) + "px";
+          requestAnimationFrame(newTime => animate(newTime, time));
+        }
+        requestAnimationFrame(animate);
+      </script>
+</html>
