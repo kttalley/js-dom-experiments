@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script>
+			let count = 0;
+			while (count <= 22) {
+				count = count + 1;
+				console.log(count);	
+			}
+			
+			//let p = document.createElement("p");
+			//p.innerHTML = `#`;
+			//document.body.appendChild(p);
+
+			//as I use the document.body method in the head section,
+			//the body element has yet to exist at time of execution.
+			//therefore the script may be embedded after the body element has
+			//been created in html.
+
+			//or the code can be wrapped in a function that ensure the code
+			//won't append the child to the html elements until the page is loaded
+			//and both html elements exist using a window.onload handler.
+
+			window.onload = function () {
+				let h2Display  = document.createElement("h2");
+				//h2Display.innerHTML =  `\|/${count }` ;
+				h2Display.innerHTML = `\|/`;
+				document.body.appendChild(h2Display); 
+			}
+
+		</script>
+	</head>
+	
+<!--	<h2 class = "display">
+		Yeeeee
+	</h2> -->
+	
+	<body>
+		<h2></h2>
+		</p></p>
+	</body>
+
+</html>
