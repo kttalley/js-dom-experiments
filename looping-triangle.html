@@ -19,13 +19,44 @@
 			//or the code can be wrapped in a function that ensure the code
 			//won't append the child to the html elements until the page is loaded
 			//and both html elements exist using a window.onload handler.
-
-			window.onload = function () {
+            function animate(time, lastTime) {
+                let angle = 0;
+                if (lastTime != null) {
+                    angle += (time - lastTime) * 0.001;
+                }
+                if (angle > 20){
+                    spinDiv.style.center(Math.sin(angle) * 200);       
+                }
+                
+            }
+            
+            window.onclick = function () {
+               // let triForce = new image(1,1);
+                //triForce.src = 'assets/logo3.svg';
+                //let imgDiv = document.createElement("img");
+                //imgDiv.innerHTML = return triForce;
+                let spinDiv = document.createElement("div");
+                spinDiv.innerHTML = `YOYOOYOY ${Math.random(20)}`;
+                document.body.appendChild(spinDiv);
+            }
+			
+            window.onload = function () {
 				let h2Display  = document.createElement("h2");
 				//h2Display.innerHTML =  `\|/${count }` ;
 				h2Display.innerHTML = `\|/`;
 				document.body.appendChild(h2Display); 
 			}
+
+          //  function animate(time, lastTime) {
+                // if (lastTime != null) {
+            //  angle += (time - lastTime) * 0.001;
+            //}
+           // cat.style.center = (Math.sin(angle) * 200) + "px";
+           // cat.style.top = (Math.sin(angle) * 200) + "px";
+            //cat.style.left = (Math.cos(angle) * 200) + "px";
+            //requestAnimationFrame(newTime => animate(newTime, time));
+        //}
+        //requestAnimationFrame(animate);
 
 		</script>
 	</head>

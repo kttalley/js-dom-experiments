@@ -27,8 +27,6 @@
         <img src="https://4fi8v2446i0sw2rpq2a3fg51-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/KittenProgression-Darling-week6.jpg" style="position: relative">
       </p>
       <script>
-        let cat = document.querySelector("img");
-        let angle = Math.PI / 6;
         function animate(time, lastTime) {
           if (lastTime != null) {
             angle += (time - lastTime) * 0.001;
@@ -39,5 +37,7 @@
           requestAnimationFrame(newTime => animate(newTime, time));
         }
         requestAnimationFrame(animate);
-      </script>
+      
+        
+        </script>
 </html>
