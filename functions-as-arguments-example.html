@@ -1,0 +1,47 @@
+<html>
+    <script>
+        function foo() {
+            console.log("heller");
+        } //this is a function declaration (no semi-colon required)
+        
+        var f = function bar() {
+
+        }; //this is a non-anonymous function expression.
+        
+        var f = function() {
+            console.log("hello");
+        
+        }; //anonymous function expression (expressions need ;)
+
+        var n = function (name) {
+            console.log("Hello"+ " "+ name);
+        };
+
+        var executor = function (fn){
+            fn(); //passing the binding of the function name into an anonymous
+                    //function allows us to pass functions as data.
+        };
+
+        //executor(n);
+        executor(f);
+        //or
+
+        var executor2 = function (fn, arg) {
+            fn(arg); 
+        };
+
+        executor2(n,'KTT');
+        //in this case, executor2 function is executing the n function with the name argument, its argument is represented by the 'arg' parameter.
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</html>
